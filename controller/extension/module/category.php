@@ -61,6 +61,17 @@ class ControllerExtensionModuleCategory extends Controller {
 			);
 		}
 
+
+
+
+			$data['home'] = $this->url->link('common/home');
+			$this->load->language('common/header');
+			$data['og_url'] = (isset($this->request->server['HTTPS']) ? HTTPS_SERVER : HTTP_SERVER) . substr($this->request->server['REQUEST_URI'], 1, (strlen($this->request->server['REQUEST_URI'])-1));
+			$data['og_image'] = $this->document->getOgImage();
+
+
+
+
 		return $this->load->view('extension/module/category', $data);
 	}
 }

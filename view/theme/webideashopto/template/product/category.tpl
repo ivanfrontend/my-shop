@@ -12,9 +12,6 @@
                           <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
                           <span class="brd-separetor">/</span>
                           <?php } ?>
-                          <!-- <a class="breadcrumb-item" href="index.html">Home</a>
-                          <span class="brd-separetor">/</span>
-                          <span class="breadcrumb-item active">sticky right</span> -->
                           <?php if($description): ?>
                           <div class=""> <?php echo $description; ?></div>
                         <?php endif; ?>
@@ -41,85 +38,13 @@
           <?php if($column_left){ ?>
           <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
               <div class="htc__shop__left__sidebar">
-                  <!-- Start Range -->
-                  <div class="htc-grid-range">
-                      <h4 class="section-title-4">FILTER BY PRICE</h4>
-                      <div class="content-shopby">
-                          <div class="price_filter s-filter clear">
-                              <form action="#" method="GET">
-                                  <div id="slider-range"></div>
-                                  <div class="slider__range--output">
-                                      <div class="price__output--wrap">
-                                          <div class="price--output">
-                                              <span>Price :</span><input type="text" id="amount" readonly>
-                                          </div>
-                                          <div class="price--filter">
-                                              <a href="#">Filter</a>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- End Range -->
-                  <!-- Start Product Cat -->
-                  <div class="htc__shop__cat">
-                      <h4 class="section-title-4">PRODUCT CATEGORIES</h4>
-                      <ul class="sidebar__list">
-                          <li><a href="#">Accessories <span>3</span></a></li>
-                          <li><a href="#">Book <span>4</span></a></li>
-                          <li><a href="#">Clothing <span>3</span></a></li>
-                          <li><a href="#">Homelife <span>6</span></a></li>
-                          <li><a href="#">Kids & Baby <span>10</span></a></li>
-                          <li><a href="#">Stationery <span>3</span></a></li>
-                          <li><a href="#">Health & Beauty <span>12</span></a></li>
-                          <li><a href="#">Home Appliances <span>15</span></a></li>
-                      </ul>
-                  </div>
-                  <!-- End Product Cat -->
-                  <!-- Start Color Cat -->
-                  <div class="htc__shop__cat">
-                      <h4 class="section-title-4">CHOOSE COLOUR</h4>
-                      <ul class="sidebar__list">
-                          <li class="black"><a href="#"><i class="zmdi zmdi-circle"></i>Black<span>3</span></a></li>
-                          <li class="blue"><a href="#"><i class="zmdi zmdi-circle"></i>Blue <span>4</span></a></li>
-                          <li class="brown"><a href="#"><i class="zmdi zmdi-circle"></i>Brown <span>3</span></a></li>
-                          <li class="red"><a href="#"><i class="zmdi zmdi-circle"></i>Red <span>6</span></a></li>
-                          <li class="orange"><a href="#"><i class="zmdi zmdi-circle"></i>Orange <span>10</span></a></li>
-                      </ul>
-                  </div>
-                  <!-- End Color Cat -->
-                  <!-- Start Size Cat -->
-                  <div class="htc__shop__cat">
-                      <h4 class="section-title-4">PRODUCT CATEGORIES</h4>
-                      <ul class="sidebar__list">
-                          <li><a href="#">xl <span>3</span></a></li>
-                          <li><a href="#">l <span>4</span></a></li>
-                          <li><a href="#">lm <span>3</span></a></li>
-                          <li><a href="#">ml <span>6</span></a></li>
-                          <li><a href="#">m <span>10</span></a></li>
-                          <li><a href="#">ml <span>3</span></a></li>
-                      </ul>
-                  </div>
-                  <!-- End Size Cat -->
-                  <!-- Start Tag Area -->
-                  <div class="htc__shop__cat">
-                      <h4 class="section-title-4">Tags</h4>
-                      <ul class="htc__tags">
-                          <li><a href="#">All</a></li>
-                          <li><a href="#">Clothing</a></li>
-                          <li><a href="#">Kids</a></li>
-                          <li><a href="#">Accessories</a></li>
-                          <li><a href="#">Stationery</a></li>
-                          <li><a href="#">Homelife</a></li>
-                          <li><a href="#">Appliances</a></li>
-                          <li><a href="#">Clothing</a></li>
-                          <li><a href="#">Baby</a></li>
-                          <li><a href="#">Beauty</a></li>
-                      </ul>
-                  </div>
-                  <!-- End Tag Area -->
+                <!-- Start Product Cat -->
+                  <?php echo  $column_left;?>
+
+                <!-- End Product Cat -->
+
+
+
               </div>
           </div>
         <?php }; ?>
@@ -145,27 +70,35 @@
                       <!-- End Short Form -->
                         <!-- Start Short Form -->
                         <div class="product__list__option">
-                            <div class="order-single-btn">
-                                <select class="select-color selectpicker">
-                                  <option>Sort by newness</option>
-                                  <option>Match</option>
-                                  <option>Updated</option>
-                                  <option>Title</option>
-                                  <option>Category</option>
-                                  <option>Rating</option>
-                                </select>
-                            </div>
+                          <div class="form-group input-group input-group-sm">
+                            <label class="input-group-addon" for="input-sort"><?php echo $text_sort; ?></label>
+                            <select id="input-sort" class="form-control" onchange="location = this.value;">
+                              <?php foreach ($sorts as $sorts) { ?>
+                              <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+                              <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+                              <?php } else { ?>
+                              <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+                              <?php } ?>
+                              <?php } ?>
+                            </select>
+                          </div>
+                          <div class="form-group input-group input-group-sm">
+                            <label class="input-group-addon" for="input-limit"><?php echo $text_limit; ?></label>
+                            <select id="input-limit" class="form-control" onchange="location = this.value;">
+                              <?php foreach ($limits as $limits) { ?>
+                              <?php if ($limits['value'] == $limit) { ?>
+                              <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
+                              <?php } else { ?>
+                              <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
+                              <?php } ?>
+                              <?php } ?>
+                            </select>
+                          </div>
                             <div class="shp__pro__show">
-                                <span>Showing 1 - 4 of 25 results</span>
+                                <span><?php echo $results; ?></span>
                             </div>
                         </div>
                         <!-- End Short Form -->
-                        <!-- Start List And Grid View -->
-                        <ul class="view__mode" role="tablist">
-                            <li role="presentation" class="grid-view active"><a href="#grid-view" role="tab" data-toggle="tab"><i class="zmdi zmdi-grid"></i></a></li>
-                            <li role="presentation" class="list-view"><a href="#list-view" role="tab" data-toggle="tab"><i class="zmdi zmdi-view-list"></i></a></li>
-                        </ul>
-                        <!-- End List And Grid View -->
                     </div>
                 </div>
             </div>
@@ -214,6 +147,7 @@
 
                 </div>
             </div>
+            <div class="col-sm-12 text-right"><?php echo $pagination; ?></div>
         </div>
 
         </div>

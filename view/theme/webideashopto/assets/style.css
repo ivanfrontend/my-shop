@@ -2174,6 +2174,8 @@ product__style--7
 }
 .product__list__option {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 select.select-color {
     border: 0 none;
