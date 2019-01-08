@@ -1,5 +1,11 @@
 <?php echo $header; ?>
+<section class="htc__product__area bg__white">
+    <div class="container">
+        <div class="row">
 <?php  echo $content_top; ?>
+</div>
+</div>
+</section>
   <section class="htc__product__area bg__white">
       <div class="container">
           <div class="row">

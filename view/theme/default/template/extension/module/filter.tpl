@@ -1,4 +1,3 @@
-<div class="col-md-12 my-z2">
 <div class="panel panel-default">
   <div class="panel-heading"><?php echo $heading_title; ?></div>
   <div class="list-group">
@@ -26,7 +25,6 @@
   <div class="panel-footer text-right">
     <button type="button" id="button-filter" class="btn btn-primary"><?php echo $button_filter; ?></button>
   </div>
-</div>
 </div>
 <script type="text/javascript"><!--
 $('#button-filter').on('click', function() {
