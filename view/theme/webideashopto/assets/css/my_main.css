@@ -1,0 +1,74 @@
+#slider_products .slider-for div img{margin: 0 auto;}
+#slider_products .slick-prev:before, #slider_products .slick-next:before{color: #cfcecc;font-size: 40px;}
+#slider_products .slick-prev, #slider_products .slick-next{width: 40px;height: 40px;}
+#slider_products .slick-prev{left: 0px; z-index: 1;}
+#slider_products .slick-next{right: 0px;}
+.my_margin_bottom70{margin-bottom: 70px;}
+.my_width_lg{
+  width: 175px;
+  }
+.my_width_xs{
+  width: 44px;
+  }
+.my_style_btn_product{
+  color: #4b4b4b;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  padding: 0px;
+  border-radius: 0px;
+  background-color: unset;
+  border: 1px solid #d5d5d5;
+}
+.my_s_btn{
+  padding: 0 28px;
+  border: 1px solid #999;
+}
+.my_style_btn_product:hover, .my_style_btn_product:hover:active, .my_style_btn_product:focus{
+  background: #ff4136;
+  border: 1px solid #ff4136;
+}
+.my_style_btn_product span{font-size: 18px;}
+
+.my_style_btn_product:hover span, .my_style_btn_product:hover:active span, .my_style_btn_product:focus span{color: #fff;}
+
+.remove__btn button i{font-size: 18px;}
+.title_social_networc{margin-bottom: 12px;}
+#sheet .pro__feature .title_atribyts{
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#sheet .pro__feature .feature__list{
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+#sheet .pro__feature .feature__list .attribute-name{text-transform: uppercase;}
+#sheet .pro__feature .feature__list .attribute-text{}
+.my-title-data{position: relative;}
+.my-title-data .my_title_append{
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+.my-rating-title{font-size: 24px;}
+.my-s-form-revrait{
+  border: 1px solid #999;
+  padding: 0 15px;
+  border-radius: 0px;
+  width: 50%;
+  min-height: 40px;
+}
+.my-color-star{color: #f3c258;}
+
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]{position: relative;}
+.my_width100{width: 100%;}
+.my_shp__pro__show{flex-wrap: wrap;width: 100%;margin-bottom: 25px;}
+.my_shp__pro__show span{width: 10%;}
