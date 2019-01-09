@@ -73,3 +73,5 @@
 .my_shp__pro__show{flex-wrap: wrap;width: 100%;margin-bottom: 25px;}
 .my_shp__pro__show span{width: 10%;}
 .my-z2{z-index: 2;}
+
+.panel-default>.panel-heading{background-color: #fff !important;}
