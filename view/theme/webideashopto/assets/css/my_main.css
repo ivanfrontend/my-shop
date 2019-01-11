@@ -75,3 +75,8 @@
 .my-z2{z-index: 2;}
 
 .panel-default>.panel-heading{background-color: #fff !important;}
+
+.contact-box input{width: 100%;}
+.form-control{box-shadow: none;border-radius: 0px;}
+.my-fv-btn{border-radius:0px;}
+.serch-w-100{width: 100%;}
